@@ -243,7 +243,7 @@ if st.session_state.get("logged_in", False):
             if st.button("Issue Book"):
                 idx = books_df[books_df["bid"] == bid].index[0]
                 today = datetime.date.today()
-                due = today + datetime.timedelta(days=7)
+                due = today + datetime.timedelta(days=30)
                 books_df.at[idx, "status"] = "issued"
                 books_df.at[idx, "issued_to"] = student
                 books_df.at[idx, "issue_date"] = str(today)
