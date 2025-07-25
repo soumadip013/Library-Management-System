@@ -184,7 +184,7 @@ if st.session_state.get("logged_in", False):
 
     menu_options = ["View Books", "Issue Book", "Return Book", "View Issued Books", "Logout"]
     if st.session_state.role == "admin":
-        menu_options = ["View Books", "Add Book", "Delete Book", "Issue Book",Issued "Return Book", "View Issued Books", "Logout"]
+        menu_options = ["View Books", "Add Book", "Delete Book", "Issue Book", "Return Book", "View Issued Books", "Logout"]
 
     menu = st.sidebar.radio("📌 Menu", menu_options)
 
@@ -243,7 +243,7 @@ if st.session_state.get("logged_in", False):
             if st.button("Issue Book"):
                 idx = books_df[books_df["bid"] == bid].index[0]
                 today = datetime.date.today()
-                due = today + datetime.timedelta(days=30)
+                due = today + datetime.timedelta(days=7)
                 books_df.at[idx, "status"] = "issued"
                 books_df.at[idx, "issued_to"] = student
                 books_df.at[idx, "issue_date"] = str(today)
