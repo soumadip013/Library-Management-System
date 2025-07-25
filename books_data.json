@@ -83,13 +83,7 @@
     "category": "Fiction",
     "status": "available"
   },
-  {
-    "bid": 13,
-    "title": "War and Peace",
-    "author": "Leo Tolstoy",
-    "category": "Philosophical fiction",
-    "status": "issued"
-  },
+  
   {
     "bid": 14,
     "title": "Python For All",
